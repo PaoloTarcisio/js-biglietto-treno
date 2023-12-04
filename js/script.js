@@ -1,4 +1,5 @@
 const chilometri = prompt ("Qunati chilometri devi percorrere? ");
+const kmInNumber = parseInt (chilometri);
 
 // verifica che i km siano scritti in numero
 if (isNaN(chilometri)) {
@@ -8,6 +9,8 @@ if (isNaN(chilometri)) {
 else {
 
     const età = prompt ("Quanti anni hai? ");
+    const etàInNumber = parseInt (etàInNumber);
+
 
     // verifica che l'età sia scritta in numero
     if (isNaN(età)){
@@ -21,10 +24,13 @@ else {
         // verifico sconti
         if (età < 18) {
             prezzo = (prezzo - ((prezzo / 100) * 20));
+            // uguale a fare (prezzo *= 0.8)
         }
 
         if (età > 65) {
                 prezzo = (prezzo - ((prezzo / 100) * 40));
+                // uguale a fare (prezzo *= 0.6)
+
         };  
 
         document.getElementById('prezzo-biglietto').innerHTML = "Il prezzo del tuo biglietto è: " + prezzo.toFixed(2) + "€.";
